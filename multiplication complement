@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int comp(int n)
+{
+    int b = floor(log2(n)+1);
+    int a = ((1<<b)-1);
+    return a^n;
+}
+int main() {  
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int k = comp(n);
+        cout<<n*k<<endl;
+    }
+    return 0;
+}
